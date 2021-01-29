@@ -90,7 +90,7 @@ func (c *Config) NewDataGatherer(ctx context.Context) (datagatherer.DataGatherer
 	}, nil
 }
 
-// Fetch retrieves information from GKE.
+// Fetch retrieves resources from the K8s API and runs Istio analysis
 func (g *DataGatherer) Fetch() (interface{}, error) {
 
 	// Fetch resources from all data gatherers and accumulate in an Unstructured slice.
